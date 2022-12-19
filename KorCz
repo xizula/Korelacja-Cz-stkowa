@@ -48,8 +48,13 @@ while True:
             except:
                 print("Wprowadzone złe wartości, spróbuj ponownie")
                 continue
-    elif wybor == 2:    
-        break
+    elif wybor == 2:
+        if len(lista) < 3:
+            print("Wprowadzono za mało danych, dodaj kolejne:") 
+            wybor = 1
+            continue   
+        else:
+            break
 
 
 # Wyświetlanie wprowadzonych zmiennych
