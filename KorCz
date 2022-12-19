@@ -22,3 +22,38 @@ class Obj:
 
     def __str__(self):  # deklaratcja metody __str__ w celu czytania obiektu
         return str(self.w1) + "\t\t\t\t" + str(self.w2) + "\t\t\t\t" + str(self.w3)
+
+
+# Dodawanie zmiennych
+wybor = 0
+lista = []
+while True:
+    while wybor < 1 or wybor > 2:
+        try:        
+            wybor = int(input("Wybierz akcję:\n1. Dodaj zmienne\n2. Zakończ\nWprowadź 1 lub 2: "))
+            if wybor < 1 or wybor > 2:      # dla nieprawidełego wyboru (nie 1 i nie 2) wyświetli się komunikat
+                print("Nieprawidlowe dane, spróbuj ponownie")
+        except ValueError:      # jeżeli podana wartość nie będzie liczbą, a np. str, wyświetli się komunikat
+            print("Zmienna musi być liczbą (1 lub 2), spróbuj ponownie")
+            wybor = 0
+    if wybor == 1:  
+        wybor = 0  
+        while True:
+            try:
+                w = Obj()   
+                w.wprowadz()    
+                w.wylicz()
+                lista.append(w)     
+                break
+            except:
+                print("Wprowadzone złe wartości, spróbuj ponownie")
+                continue
+    elif wybor == 2:    
+        break
+
+
+# Wyświetlanie wprowadzonych zmiennych
+print("Wprowadzone elementy")
+print("w1\t\t\t\tw2\t\t\t\tw3")
+for elem in lista:
+    print(elem)
