@@ -31,7 +31,7 @@ while True:
     while wybor < 1 or wybor > 2:
         try:        
             wybor = int(input("Wybierz akcję:\n1. Dodaj zmienne\n2. Zakończ\nWprowadź 1 lub 2: "))
-            if wybor < 1 or wybor > 2:      # dla nieprawidełego wyboru (nie 1 i nie 2) wyświetli się komunikat
+            if wybor < 1 or wybor > 2:      # dla nieprawidłowego wyboru (nie 1 i nie 2) wyświetli się komunikat
                 print("Nieprawidlowe dane, spróbuj ponownie")
         except ValueError:      # jeżeli podana wartość nie będzie liczbą, a np. str, wyświetli się komunikat
             print("Zmienna musi być liczbą (1 lub 2), spróbuj ponownie")
