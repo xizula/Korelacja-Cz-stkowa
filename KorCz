@@ -1,0 +1,24 @@
+import math    
+
+class Obj:
+    def __init__(self):  
+        self.w1 = None
+        self.w2 = None
+        self.w3 = None
+        self.w12 = None
+        self.w13 = None
+        self.w23 = None
+
+    def wprowadz(self):  # metoda uzupelnająca zmienne w1, w2, w3
+        self.w1 = float(input("Podaj wartość w1: "))  
+        self.w2 = float(input("Podaj wartość w2: "))  
+        self.w3 = float(input("Podaj wartość w3: "))
+
+
+    def wylicz(self):   # wylicznie w12, w13, w23
+        self.w12 = self.w1 * self.w2
+        self.w13 = self.w1 * self.w3
+        self.w23 = self.w2 * self.w3
+
+    def __str__(self):  # deklaratcja metody __str__ w celu czytania obiektu
+        return str(self.w1) + "\t\t\t\t" + str(self.w2) + "\t\t\t\t" + str(self.w3)
